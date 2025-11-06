@@ -14,7 +14,7 @@ export default function NavBar() {
   const links: LinkItem[] = [
     { href: "/primeraoriginal", label: " Adivina el número" },
     { href: "/segundaoriginal", label: "Reflejos" },
-    { href: "/terceraoriginal", label: " Variables" },
+    { href: "/terceraoriginal", label: "No toques la Bomba" },
   ];
 
   return (
