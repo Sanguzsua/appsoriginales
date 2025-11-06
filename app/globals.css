@@ -1,0 +1,137 @@
+@import "tailwindcss";
+
+:root {
+  --background: #0a0f1e; /* 🔵 Fondo sólido oscuro elegante */
+  --foreground: #f8fafc;
+  --accent: #3b82f6;
+  --accent-hover: #60a5fa;
+  --card-bg: #16213e; /* Tarjetas ligeramente más claras */
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: 'Poppins', sans-serif;
+  min-height: 100vh;
+  margin: 0;
+}
+
+/* ---- NAVBAR ---- */
+nav {
+  background-color: #1e3a8a; /* Azul profundo sin degradado */
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+  padding: 1rem;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+  position: sticky;
+  top: 0;
+  z-index: 50;
+  transition: background 0.3s ease, transform 0.3s ease;
+}
+
+nav a {
+  text-decoration: none;
+  color: white;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  transition: color 0.2s, transform 0.2s;
+}
+
+nav a:hover {
+  color: #facc15;
+  transform: scale(1.1);
+}
+
+/* ---- CONTENEDORES DE JUEGOS ---- */
+.game-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 2rem;
+  margin-top: 2rem;
+}
+
+.card {
+  background: var(--card-bg);
+  padding: 2rem;
+  border-radius: 1rem;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+  max-width: 400px;
+  width: 90%;
+  transition: transform 0.2s;
+}
+
+.card:hover {
+  transform: scale(1.02);
+}
+
+/* ---- BOTONES ---- */
+button {
+  cursor: pointer;
+  border: none;
+  outline: none;
+  padding: 0.8rem 1.5rem;
+  border-radius: 0.75rem;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  margin: 0.4rem;
+}
+
+button:hover {
+  transform: scale(1.05);
+}
+
+.btn-primary {
+  background-color: var(--accent);
+  color: white;
+}
+
+.btn-primary:hover {
+  background-color: var(--accent-hover);
+}
+
+.btn-secondary {
+  background-color: white;
+  color: #0f172a;
+}
+
+.btn-secondary:hover {
+  background-color: #e2e8f0;
+}
+
+/* ---- INPUT ---- */
+input {
+  border: 2px solid #3b82f6;
+  border-radius: 0.5rem;
+  padding: 0.6rem;
+  width: 80%;
+  text-align: center;
+  margin-bottom: 1rem;
+  color: #0f172a;
+}
+
+/* ---- RESPONSIVO ---- */
+@media (max-width: 600px) {
+  nav {
+    flex-direction: column;
+    gap: 0.8rem;
+  }
+
+  .card {
+    padding: 1.5rem;
+  }
+
+  h1 {
+    font-size: 1.5rem;
+  }
+}
